@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>문서구조</title>
+		<style type="text/css">
+			body{
+				background-color: #e6f2ff;
+			}
+			
+			p, h1, h2{
+				margin: 0;
+				padding: 0;
+			}
+			
+			header{
+				background-color: #c1f0c1;
+				width: 600px;
+				height: 120px;
+				border-radius: 10px;
+			}
+			
+			nav{
+				background-color: #ccb3ff;
+				width: 550px;
+				height: 20px;
+				position: relative;
+				margin-left: auto;
+				margin-right: auto;
+				border-radius: 3px;
+			}
+			
+			aside{
+				background-color: #ffcce6;
+				width: 100px;
+				height: 500px;
+				border-radius: 10px;
+				position: absolute;
+			}
+			
+			#main{
+				background-color: #4dc6ff;
+				width: 500px;
+				height: 500px;
+				border-radius: 10px;
+				position: relative;
+				left: 100px;
+			}
+			
+			section{
+				background-color: #e0e0eb;
+				width: 450px;
+				height: 250px;
+				border-radius: 10px;
+				margin-left: auto;
+				margin-right: auto;
+				position: relative;
+				margin-bottom: 10px;
+			}
+			
+			section > article{
+				background-color: #ffffcc;
+				width: 430;
+				height: 70;
+				border-radius: 10px;
+				margin-left: auto;
+				margin-right: auto;
+				position: relative;
+				margin-bottom: 10px;
+			}
+			
+			#firstSection >header{
+				background-color: #c1f0c1;
+				width: 430px;
+				height: 20px;
+				border-radius: 10px;
+				margin-left: auto;
+				margin-right: auto;
+				top: 10px;
+				position: relative;
+			}
+			
+			#firstSection > p{
+				width: 430px;
+				height: 20px;
+				margin-top: 20px;
+				margin-left: auto;
+				margin-right: auto;
+				position: relative;
+			}
+			
+			#firstSection  > footer {
+				background-color: yellowgreen;
+				width: 430px;
+				height: 20px;
+				border-radius: 10px;
+				margin-top: 20px;
+				margin-left: auto;
+				margin-right: auto;
+				position: relative;
+				top: 130px;
+			}
+			
+			#comment {
+				background-color: #e0e0eb;
+				width: 450px;
+				height: 200px;
+				border-radius: 10px;
+				margin-left: auto;
+				margin-right: auto;
+				position: relative;
+			}
+			
+			.subfooter {
+				background-color: yellowgreen;
+				width: 400px;
+				height: 20px;
+				border-radius: 10px;
+				margin-top: 20px;
+				margin-left: auto;
+				margin-right: auto;
+				position: relative;
+			}
+			
+			footer {
+				background-color: yellowgreen;
+				width: 600px;
+				height: 100px;
+				border-radius: 10px;
+			}
+		</style>
+		<script type="text/javascript"></script>
+	</head>
+	<body>
+		<header>
+			<p>header</p>
+			<hgroup>
+				<h1>Title</h1>
+				<h2>Sub Title</h2>
+			</hgroup>
+			<nav>navigation</nav>
+		</header>
+		<aside>
+			<p>aside</p>
+		</aside>
+		<article id="main">
+			<p>article</p>
+			<section id="firstSection">
+				<header><h1>header</h1></header>
+				<p>section</p>
+				<footer><p>footer</p></footer>
+			</section>
+			<section id="comment">
+				<p>section2</p>
+				<article>
+					<p>article</p>
+					<footer class="subfooter"><p>footer</p></footer>
+				</article>
+				<article>
+					<p>article</p>
+					<footer class="subfooter"><p>footer</p></footer>
+				</article>
+			</section>
+		</article>
+		<footer>
+			<p>footer</p>
+		</footer>
+	</body>
+</html>
