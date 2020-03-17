@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>오늘의메뉴</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 10px;
+				text-align: center;
+			}
+			section{
+				width: 1000px;
+				height: 600px;
+				background-color: #f2f2f2;
+			}
+			button{
+				text-align: center;
+				font-size: 30px;
+			}
+			img{
+				padding: 1px;
+			}
+		</style>
+		<script type="text/javascript">
+			function randomPick(){
+				var rand = Math.floor(Math.random()*4);
+				changeImg(rand);
+			}
+			
+			function changeImg(num){
+				for (var i = 0; i < 4; i++) {
+					document.getElementById(i).style.border = "0px";
+					document.getElementById(i).style.opacity = "0.5";
+				}
+				var names = new Array("케이크", "햄버거", "스테이크", "샌드위치");
+				var links = new Array("images/cake.jpg", "images/burger.jpg", "images/steak.jpg", "images/sandwich.jpg");
+				document.getElementById("selectImg").src = links[num];
+				document.getElementById("menu").innerHTML = "오늘의 메뉴 : " + names[num];
+				document.getElementById(num).style.border = "3px solid #00b300";
+				document.getElementById(num).style.opacity = "1";
+			}
+			
+			function transparently(num){
+				if(document.getElementById(num).style.border == "0px")
+					document.getElementById(num).style.opacity = "0.5";
+			}
+			function clearly(num){
+				document.getElementById(num).style.opacity = "1";
+			}
+		</script>
+	</head>
+	<body>
+		<section>
+			<button onclick="randomPick()">랜덤 선택</button>
+			<h1 id="menu">오늘의 메뉴 : 케이크</h1>
+			<img id="selectImg" src="images/cake.jpg" width="400px" height="260px">
+			
+			<div>
+				<img id="0" src="images/cake.jpg" width="200px" height="130px" onclick="changeImg(0)" onmouseover="clearly(0)" onmouseout="transparently(0)">
+				<img id="1" src="images/burger.jpg" width="200px" height="130px" onclick="changeImg(1)" onmouseover="clearly(1)" onmouseout="transparently(1)">
+				<img id="2" src="images/steak.jpg" width="200px" height="130px" onclick="changeImg(2)" onmouseover="clearly(2)" onmouseout="transparently(2)">
+				<img id="3" src="images/sandwich.jpg" width="200px" height="130px" onclick="changeImg(3)" onmouseover="clearly(3)" onmouseout="transparently(3)">
+			</div>
+		</section>
+	</body>
+</html>
